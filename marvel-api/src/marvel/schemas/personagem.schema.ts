@@ -6,4 +6,4 @@ const personagemSchema = new Schema({
   urlImg: String,
 });
 
-export default model("Personagem", personagemSchema);
+export default model("Personagens", personagemSchema);
