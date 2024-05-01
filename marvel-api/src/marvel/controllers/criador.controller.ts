@@ -28,10 +28,10 @@ class CriadorController {
     return res.json(deleteMessage);
   }
 
-  // async createIntegratedCreators(req: Request, res: Response): Promise<void> {
-  //   await criadorService.integrateCreators();
-  //   res.status(201).send("Dados integrados e salvos com sucesso!");
-  // }
+  async createIntegratedCreators(req: Request, res: Response): Promise<void> {
+    await criadorService.integrateCreators();
+    res.json({ message: "Criadores buscados e guardados com sucesso." });
+  }
 }
 
 export default new CriadorController();

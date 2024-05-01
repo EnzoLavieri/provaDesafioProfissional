@@ -20,7 +20,7 @@ As primeiras rotas de sua API serão para buscar os dados da API da Marvel e sal
 3. Modelagem das Entidades:<br>
    [✓] -Personagens: Crie uma entidade Personagem para mapear os dados dos personagens que aparecem na saga escolhida. Inclua atributos como nome, descrição, e URL da imagem.<br>
    [✓] -Quadrinhos (Comics): Desenvolva uma entidade Comic que armazena informações sobre os quadrinhos que fazem parte da saga, como título, descrição, data de publicação, e capa.<br>
-   [] -Criadores: Crie uma entidade Criador que represente os criadores dos quadrinhos (roteiristas, desenhistas, etc.), incluindo nome, função, e quais quadrinhos contribuíram.<br>
+   [✓] -Criadores: Crie uma entidade Criador que represente os criadores dos quadrinhos (roteiristas, desenhistas, etc.), incluindo nome, função, e quais quadrinhos contribuíram.<br>
 
 4. Implementação do CRUD: <br>
    [✓] Para cada uma das entidades (Personagem, Comic, Criador), implemente operações CRUD que permitam criar, ler, atualizar e deletar registros no seu sistema.
@@ -30,9 +30,9 @@ As primeiras rotas de sua API serão para buscar os dados da API da Marvel e sal
    Exemplos: Rota para listar somente os roteiristas, uma rota para buscar todas as personagens do sexo feminino de determinada sagas, uma rota para contar o total de revistas de derminada saga, e assim por diante.
 
 6. Desenvolvimento de Testes:<br>
-   Testes Automatizados: Escreva testes unitários e de integração para garantir o correto funcionamento das operações CRUD e da lógica de negócios da sua API.<br>
-   Testes End-to-End (E2E): Implemente testes E2E para simular o fluxo completo de uso da sua API, desde a requisição inicial até a resposta final.<br>
-   Teste de Carga: Realize um teste de carga para avaliar a performance e a estabilidade da sua API sob condições de uso elevado.<br>
+   [✓] Testes Automatizados: Escreva testes unitários e de integração para garantir o correto funcionamento das operações CRUD e da lógica de negócios da sua API.<br>
+   [✓] Testes End-to-End (E2E): Implemente testes E2E para simular o fluxo completo de uso da sua API, desde a requisição inicial até a resposta final.<br>
+   [] Teste de Carga: Realize um teste de carga para avaliar a performance e a estabilidade da sua API sob condições de uso elevado.<br>
 
 # Entregáveis:<br>
 

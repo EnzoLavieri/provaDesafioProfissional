@@ -15,6 +15,8 @@ routes.put("/updateComic/:id", comicController.update);
 routes.delete("/deleteComic/:id", comicController.delete);
 //
 
+routes.get("/importar-criadores", criadorController.createIntegratedCreators);
+
 routes.post("/criarCriador", criadorController.create);
 routes.get("/findCriador", criadorController.findAll); //2
 routes.get("/criador/:id", criadorController.findById); //5

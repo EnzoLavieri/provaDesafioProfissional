@@ -18,7 +18,7 @@ class App {
 
   public async database() {
     try {
-      await mongoose.connect("mongodb://127.0.0.1:27017/marvel-api");
+      await mongoose.connect("mongodb://0.0.0.0:27017/marvel-api");
       console.log("Sucesso ao conectar com o banco de dados");
     } catch (error) {
       console.error("Não foi possível conectar na base de dados:", error);

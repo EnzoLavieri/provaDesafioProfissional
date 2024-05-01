@@ -55,7 +55,7 @@ class ComicService {
         const newComic: comicType = {
           titulo: comic.title,
           descricao: comic.description || "",
-          dataPublicacao: comic.onsaleDate,
+          dataPublicacao: comic.dates.type,
           capa: comic.thumbnail.path + "." + comic.thumbnail.extension,
         };
 

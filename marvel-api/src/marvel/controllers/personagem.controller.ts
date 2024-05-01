@@ -37,7 +37,7 @@ class PersonagemController {
   async fetchCharacters(req: Request, res: Response) {
     try {
       await persoagemService.fetchAndStoreCharacters();
-      res.json({ message: "Characters fetched and stored successfully." });
+      res.json({ message: "Personagens buscados e guardados com sucesso." });
     } catch (error) {
       console.error(error);
     }

@@ -1,26 +1,26 @@
 import { Request, Response } from "express";
 import comicService from "../services/comic.service";
 
-class PersonagemController {
+class ComicController {
   async create(req: Request, res: Response) {
-    const createPersonagem = await comicService.create(req.body);
+    const createComic = await comicService.create(req.body);
     res.status(201);
-    return res.json(createPersonagem);
+    return res.json(createComic);
   }
 
   async findAll(req: Request, res: Response) {
-    const findedPersonagem = await comicService.findAll();
-    return res.json(findedPersonagem);
+    const findedComics = await comicService.findAll();
+    return res.json(findedComics);
   }
 
   async findById(req: Request, res: Response) {
-    const findedPersonagem = await comicService.findById(req.params.id);
-    return res.json(findedPersonagem);
+    const findedComics = await comicService.findById(req.params.id);
+    return res.json(findedComics);
   }
 
   async update(req: Request, res: Response) {
-    const updatePersoagem = await comicService.update(req.params.id, req.body);
-    return res.json(updatePersoagem);
+    const updateComic = await comicService.update(req.params.id, req.body);
+    return res.json(updateComic);
   }
 
   async delete(req: Request, res: Response) {
@@ -45,4 +45,4 @@ class PersonagemController {
   }
 }
 
-export default new PersonagemController();
+export default new ComicController();

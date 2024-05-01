@@ -1,6 +1,6 @@
 export interface comicType {
   titulo: String;
   descricao: String;
-  dataPublicacao: Date;
+  dataPublicacao: Array<10>;
   capa: String;
 }
