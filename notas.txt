@@ -1,9 +1,0 @@
-public key: ed11dfee7e8bb0ecd0712787cbbc1ddf
-private key: 6928eea5d78a9d6adef1be06750d5dcb9bc6fe15
-(ts+privateKey+publicKey):16928eea5d78a9d6adef1be06750d5dcb9bc6fe15ed11dfee7e8bb0ecd0712787cbbc1ddf
-MD5 Hash: 287493cf5762baa34a0701791215a618
-
-exemplo que passa o nome do personagem
-https://gateway.marvel.com/v1/public/characters?name=Deadpool&apikey=ed11dfee7e8bb0ecd0712787cbbc1ddf&hash=287493cf5762baa34a0701791215a618&ts=1
-
-Saga: War of Kings 
