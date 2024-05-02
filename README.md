@@ -1,53 +1,72 @@
-# Avaliação - Sagas do Universo Marvel
+# Documentação 
+**Introdução**: Esta é uma API totalmente customizada com base nas exigências e critérios de avaliação dados pelo professor da matéria.  
+**Principal linguagem usada**: TypeScript.  
+**Banco de dados**: MongoDB.  
+**Frameworks**: Express, Mongoose, Axios, Supertest, Jest, Node e Nodemon.  
+**Frameworks de teste**: Supertest, Jest e Autocannon.  
 
-https://github.com/TI-UNICESUMAR/2024-desafio-profissional-v-ESOFT5S-A/issues/14
+**URLs base**
+1. http://localhost:3000/findCriador: Busca todos os criadores.
+2. http://localhost:3000/findPersonagens: Busca todos os personagens.
+3. http://localhost:3000/findComics: Busca todas as comics.
 
-O Universo Marvel, repleto de super-heróis, vilões e histórias épicas, tem sido uma fonte inesgotável de entretenimento e inspiração. Com a Marvel API, você tem acesso a uma riqueza de informações sobre este universo, desde personagens até as sagas que definem eras.
+**Entidades**  
+Comic, atributos: título, descrição, data de publicação, capa.  
+Criador, atributos: nome, função, contriComic.  
+Personagem, atributos: nome, descrição, URL da imagem.  
 
-Objetivo da Atividade:<br>
-Nesta atividade, você irá desenvolver uma API própria que servirá como um intermediário entre a Marvel API e o usuário final. Sua API irá focar em uma saga específica do Universo Marvel, permitindo aos usuários explorar os personagens envolvidos, os quadrinhos que compõem a saga, e mais. Você irá modelar esta informação através de entidades em seu sistema, sobre as quais você implementará operações CRUD (Create, Read, Update, Delete).
+**Inicialização**
+1. Instale o MongoDB e o Node.js.
+2. Instale as dependências através do `npm install` no terminal.
+3. Certifique-se de que todas as dependências e frameworks necessários estão instalados e funcionando corretamente.
+4. Para iniciar a aplicação, execute `npm run start:dev`.<br><br><br>
 
-As primeiras rotas de sua API serão para buscar os dados da API da Marvel e salvar em seu banco de dados. Suas outras rotas serão para consulta e manipulação em seu próprio banco de dados.
+# Documentação das rotas
 
-# Descrição da Atividade:
+## Comics
+- **GET /numeroDeComics**
+  - Retorna o número total de quadrinhos disponíveis.
+- **GET /importar-comics**
+  - Importa os quadrinhos da série.
+- **POST /criarComic**
+  - Cria um novo quadrinho.
+- **GET /findComics**
+  - Retorna todos os quadrinhos.
+- **GET /comic/:id**
+  - Retorna um quadrinho específico pelo ID gerado pelo Mongo.
+- **PUT /updateComic/:id**
+  - Atualiza um quadrinho pelo ID gerado pelo Mongo.
+- **DELETE /deleteComic/:id**
+  - Deleta um quadrinho pelo ID gerado pelo Mongo.
 
-1. Registro na Marvel API:<br>
-   [✓] Obtenha sua chave de API registrando-se no Marvel Developer Portal. Esta chave permitirá que sua API faça requisições para buscar dados necessários.
+## Criadores 
+- **POST /criarCriador**
+  - Cria um novo criador.
+- **GET /importar-criadores**
+  - Importa todos os criadores da série.
+- **GET /findCriador**
+  - Retorna todos os criadores.
+- **GET /criador/:id**
+  - Retorna um criador pelo ID gerado pelo Mongo.
+- **PUT /updateCriador/:id**
+  - Atualiza um criador pelo ID gerado pelo Mongo.
+- **DELETE /deleteCriador/:id**
+  - Deleta um criador pelo ID gerado pelo Mongo.
 
-2. Escolha de uma Saga: <br>
-   [✓] Selecione uma saga do Universo Marvel para ser o foco da sua API. Esta escolha determinará os dados que você irá buscar e disponibilizar através da sua API.
-
-3. Modelagem das Entidades:<br>
-   [✓] -Personagens: Crie uma entidade Personagem para mapear os dados dos personagens que aparecem na saga escolhida. Inclua atributos como nome, descrição, e URL da imagem.<br>
-   [✓] -Quadrinhos (Comics): Desenvolva uma entidade Comic que armazena informações sobre os quadrinhos que fazem parte da saga, como título, descrição, data de publicação, e capa.<br>
-   [✓] -Criadores: Crie uma entidade Criador que represente os criadores dos quadrinhos (roteiristas, desenhistas, etc.), incluindo nome, função, e quais quadrinhos contribuíram.<br>
-
-4. Implementação do CRUD: <br>
-   [✓] Para cada uma das entidades (Personagem, Comic, Criador), implemente operações CRUD que permitam criar, ler, atualizar e deletar registros no seu sistema.
-
-5. Rotas Auxiliares:<br>
-   [✓] Deverão ser criadas pelo menos 5 rotas auxiliares para complementar a funcionalidade de sua aplicação. O que cada rota irá fazer fica a seu critério.
-   Exemplos: Rota para listar somente os roteiristas, uma rota para buscar todas as personagens do sexo feminino de determinada sagas, uma rota para contar o total de revistas de derminada saga, e assim por diante.
-
-6. Desenvolvimento de Testes:<br>
-   [✓] Testes Automatizados: Escreva testes unitários e de integração para garantir o correto funcionamento das operações CRUD e da lógica de negócios da sua API.<br>
-   [✓] Testes End-to-End (E2E): Implemente testes E2E para simular o fluxo completo de uso da sua API, desde a requisição inicial até a resposta final.<br>
-   [] Teste de Carga: Realize um teste de carga para avaliar a performance e a estabilidade da sua API sob condições de uso elevado.<br>
-
-# Entregáveis:<br>
-
-- Código Fonte da API: Inclua todo o código desenvolvido para a API, organizado e documentado.<br>
-- Documentação das Rotas: Forneça uma documentação clara das rotas disponíveis na sua API, incluindo os métodos HTTP suportados e os formatos de requisição/resposta.<br>
-- Relatórios de Testes: Apresente os resultados dos testes automatizados, E2E, e de carga, incluindo qualquer ferramenta ou abordagem utilizada para realizá-los.<br>
-- A ferramenta Jest gera um relatório de cobertura de testes, sendo assim, a meta é alcançar 90% de cobertura de testes na aplicação.<br>
-
-# Critérios de Avaliação:
-
-- Completeness das operações CRUD para cada entidade.
-- Qualidade e cobertura dos testes implementados.
-- Performance e robustez da API, especialmente sob carga.
-- Clareza da documentação e facilidade de uso da API.
-
-Notas Finais
-Esta atividade não apenas aprofunda seu entendimento do Universo Marvel, mas também desenvolve habilidades cruciais em design de API, modelagem de dados, e testes de software.<br>
-Boa sorte, e que a força dos super-heróis esteja com você!
+## Personagens 
+- **GET /personagemOrdemDescLonga**
+  - Retorna o personagem com a descrição mais longa.
+- **GET /personagemOrdemAlfabetica**
+  - Retorna todos os personagens em ordem alfabética.
+- **GET /importar-personagens**
+  - Importa os personagens para a base de dados.
+- **POST /criarPersonagem**
+  - Cria um novo personagem.
+- **GET /findPersonagens**
+  - Retorna todos os personagens.
+- **GET /personagem/:id**
+  - Retorna um personagem pelo ID gerado pelo Mongo.
+- **PUT /updatePersonagem/:id**
+  - Atualiza um personagem pelo ID gerado pelo Mongo.
+- **DELETE /deletePersonagem/:id**
+  - Deleta um personagem pelo ID gerado pelo Mongo.
