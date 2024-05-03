@@ -2,7 +2,9 @@ import * as request from "supertest";
 import app from "../src/app";
 import PersonagemModel from "../src/marvel/schemas/personagem.schema";
 import personagemService from "../src/marvel/services/personagem.service";
-
+//------------------------------------------------------------------------------------------------------------------
+//----> TROCAR OS IDS ANTIGOS PELOS IDS DOS NOVOS DOCUMENTOS GERANDOS PELO MONGO, CASO CONTRARIO, VAI DAR ERRO <----
+//------------------------------------------------------------------------------------------------------------------
 describe("Testando endpoints de personagem", () => {
   it("Deve inserir um personagem no banco de dados", async () => {
     const PersonagemMock = {
