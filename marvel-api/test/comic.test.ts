@@ -2,7 +2,9 @@ import * as request from "supertest";
 import app from "../src/app";
 import ComicModel from "../src/marvel/schemas/comic.schema";
 import comicService from "../src/marvel/services/comic.service";
-
+//------------------------------------------------------------------------------------------------------------------
+//----> TROCAR OS IDS ANTIGOS PELOS IDS DOS NOVOS DOCUMENTOS GERANDOS PELO MONGO, CASO CONTRARIO, VAI DAR ERRO <----
+//------------------------------------------------------------------------------------------------------------------
 describe("Testando endpoints de comics", () => {
   it("Deve inserir uma comic no banco de dados", async () => {
     const ComicMock = {
