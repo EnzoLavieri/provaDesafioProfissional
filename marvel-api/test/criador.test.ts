@@ -2,7 +2,9 @@ import * as request from "supertest";
 import app from "../src/app";
 import CriadorModel from "../src/marvel/schemas/criador.schema";
 import criadorService from "../src/marvel/services/criador.service";
-
+//------------------------------------------------------------------------------------------------------------------
+//----> TROCAR OS IDS ANTIGOS PELOS IDS DOS NOVOS DOCUMENTOS GERANDOS PELO MONGO, CASO CONTRARIO, VAI DAR ERRO <----
+//------------------------------------------------------------------------------------------------------------------
 describe("Testando endpoints de criador", () => {
   it("Deve inserir um criador no banco de dados", async () => {
     const CriadorMock = {
